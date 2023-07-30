@@ -1,0 +1,132 @@
+/*************** Main *****************/
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("/src/fonts/Modenine-2OPd.ttf");
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "CustomFont", sans-serif;
+  display: grid;
+  overflow: hidden;
+  background: gray;
+  color: #ffffff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 10fr 1fr;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #000000;
+  grid-column: 1 / 3;
+  grid-row: 2;
+  align-self: flex-end;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a.selected {
+  background-color: white;
+  color: black;
+}
+
+.left-text {
+  margin: 0;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  transition: width 1s, height 1s;
+}
+
+.inactive .icon {
+  width: 50px;
+  height: 50px;
+  transition-timing-function: ease;
+}
+
+.active .icon {
+  width: 100px;
+  height: 100px;
+  transition-timing-function: ease;
+}
+
+.inactive div p {
+  display: none;
+}
+
+#left-menu {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 14px;
+  text-align: left;
+  align-self: flex-end;
+}
+
+#content {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 14px;
+  text-align: center;
+  align-self: center;
+}
+
+#left-menu p {
+  margin: 1px;
+}
+
+/*************** Weather *****************/
+
+.weather-content div {
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px;
+}
+
+.mass-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.weather-content p {
+  margin: 1px;
+}
+
+.weather-content .day {
+  font-size: 50px;
+}
+
+.weather-content {
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

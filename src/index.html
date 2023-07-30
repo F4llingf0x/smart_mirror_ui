@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0" />
+    <title>Smart mirror ui</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="left-menu">
+        <div id="weather">
+          <img class="icon" src="/src/weather_icons/cloudy.svg" alt="weather
+          picture" width="100"">
+        </div>
+      </div>
+
+      <div id="content">
+        <div></div>
+      </div>
+
+      <div class="navbar" id="navbar">
+        <a href="weather">Weather</a>
+        <a href="todo_list">TODO list</a>
+        <a href="news">News</a>
+        <a href="calendar">Calendar</a>
+        <a href="Settings">Settings</a>
+      </div>
+    </div>
+  </body>
+  <script src="weather_classes.js"></script>
+  <script src="weather.js"></script>
+  <script src="util.js"></script>
+  <script src="control.js"></script>
+</html>
